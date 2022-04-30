@@ -14,8 +14,11 @@ Brain tumor image segmentation is often done by experts to separate different pa
 Many computers aided diagnosis methods have been developed in recent years to automate the process of segmentation to save the doctors' time and to provide trustworthy and accurate results while reducing the exerted efforts of experienced physicians to perform the procedures of diagnosis for every single patient. Some of the special segmentation models are:
 
 •	Thresholding method: if the value for each pixel exceeds the threshold, it is identified as a tumor. [5].
+
 •	Edge-based method: differences in the intensity between edges of pixels are used as the boundaries of the tumors [6].
+
 •	Region growing method: first, a pixel input into segmentation and similar pixels will be classified as a tumor. [7].
+
 •	Atlas method: An MRI without a tumor will be used to segment MRI with the tumor volume. [8].
 
 Among these methods, the role of Convolutional Neural Networks (CNN) in automated brain tumor segmentation is meaningful and attracted great interest in recent years. CNN was introduced in 1990, inspired by experiments performed by Hubel and Wiesel. One of the first projects to be done with CNN was Yann Lecun's famous handwritten digit identification project. He proposed the LeNet-5, which produced promising results [9]. The central brilliance of the convolution network occurred in 2012 during the ImageNet Large Scale Recognition Challenge. This was an event that caught the attention of the research community. In the 2012 ImageNet Contest, Alex Krizhevsky entered with the AlexNet, which had an excellent performance compared to others in classifying images with 16.4% error. 
