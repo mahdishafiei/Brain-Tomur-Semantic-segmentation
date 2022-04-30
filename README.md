@@ -4,6 +4,8 @@ here we are going to share the code of this project
 
 
 1.	Introduction
+
+
 Brain tumors are among the most lethal cancers and cause the death of a significant number of people annually. An estimated 16,830 deaths were attributed to primary malignant brain tumors in the US in 2018. According to a study from 2011 to 2015, In the US, the 5-year and 10-year relative survival rates of patients [1] with malignant tumors were 35.0% and 29.3%, respectively. Based on this study, Brain and other Central nervous system tumors (both malignant and non-malignant) had an average annual age-adjusted incidence of 11.20 per 100,000 people aged 15–39 years. Also, these tumors were the second most common cancer in males in this age group and the third most common cancer in females in this age group [1].
 
 Magnetic resonance imaging (MRI) is the primary scan tool for detecting and diagnosing tumors since MRI provides outstanding contrast for soft tissues. In general, the function of MR imaging in the workup of Intra axial tumors can be divided into tumor diagnosis and classification, treatment planning, and post-treatment management [2]. A particular dye called a contrast medium is given before the scan to make a more precise image.
