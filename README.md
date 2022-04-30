@@ -1,8 +1,5 @@
-# Brain-Tomur-Semantic-seg
-Collaboration on advancing science (Seriously!)
-here we are going to share the code of this project 
-
-
+# a quantitative comparison between Focal loss and Binary cross-entropy loss in brain tumor semantic segmentation
+ 
 1.	Introduction
 
 
