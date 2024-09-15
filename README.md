@@ -28,7 +28,7 @@ You will need Python 3.X.X with some packages which you can install direclty usi
 ## Model Architecture
 Here is the structure of model
 
-![model](images/model.png)
+![model](images/Model.png)
 
 ## Author:
 * Mahdi Shafiei : [Linkedin](https://www.linkedin.com/in/mahdi-shafiei-bb4a531b7/)
