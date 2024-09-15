@@ -18,7 +18,7 @@ meningioma       	  | glioma		| 	pituitary tumor
 ![](samples/sample7.png)  |  ![](samples/sample8.png)		| ![](samples/sample9.png) 
 
 ## Getting Started
-Here we will explain how to get the [data](https://drive.google.com/drive/folders/13Odglap6pPoqptcc-JkKrAXRTf1RPdxQ?usp=sharing) and convert it into the usable form. You can run the train and run model using [notebook](https://github.com/mahdishafiei/Brain-Tomur-Semantic-segmentation/blob/main/Unet%20training%20and%20coefficients.ipynb).
+Here we will explain how to get the [data](https://drive.google.com/drive/folders/13Odglap6pPoqptcc-JkKrAXRTf1RPdxQ?usp=sharing) and convert it into the usable form. You can run the train and run model using [notebook](https://github.com/mahdishafiei/Brain-Tomur-Semantic-segmentation/blob/main/Unet_training_and_coefficients.ipynb).
 * it is better to use the notebook in the Colab environment however you can use it locally but you should make some changes to it about loading the dataset.
 ### Dataset
 you should donwload the provided dataset and put it in the appropriate directories base on what is in the [notebook](https://github.com/mahdishafiei/Brain-Tomur-Semantic-segmentation/blob/main/Unet%20training%20and%20coefficients.ipynb).
