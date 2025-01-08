@@ -31,5 +31,5 @@ Here is the structure of model
 ![model](images/Model.png)
 
 ## Author:
-* Mahdi Shafiei : [Linkedin](https://www.linkedin.com/in/mahdi-shafiei-bb4a531b7/)
+* Mahdi Shafiei Neyestanak : [Linkedin](https://www.linkedin.com/in/mahdi-shafiei-bb4a531b7/)
 * Hamid Jahani: [Linkedin](https://www.linkedin.com/in/hamid-jahani/)
