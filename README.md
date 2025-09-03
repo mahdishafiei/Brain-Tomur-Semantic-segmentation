@@ -1,35 +1,85 @@
-# A quantitative comparison between Focal loss and Binary Cross-Entropy loss in Brain Tumor Auto-segmentation using U-net!
+# Brain Tumor Auto-Segmentation with U-Net  
+*A Quantitative Comparison of Focal Loss and Binary Cross-Entropy Loss*
 
-## About the research.
-1. Brain tumors are among the fatal cancers and cause the death of many people annually. Early diagnosis of a brain tumor can help save the patient's life.
+[![Paper DOI](https://img.shields.io/badge/DOI-10.18502/jbe.v11i1.19315-blue)](https://doi.org/10.18502/jbe.v11i1.19315)
 
-2. We have collected a dataset consisting of 314 brain MRI images in all planes taken by giving a contrast medium with the dimension of 800*512, which offers the highest resolution. First, skull stripping has been implemented to separate the brain from other parts in the images. Next, we have annotated the tumors in the images under the supervision of experienced radiologists to create ground truth. 
+Official implementation of the paper:  
+**A Quantitative Comparison between Focal Loss and Binary Cross-Entropy Loss in Brain Tumor Auto-Segmentation Using U-Net**  
+Published in *Journal of Biostatistics and Epidemiology*, 2025 
 
-3. Comprehensive literature review on essential loss functions commonly used in image segmentation with U-net has been done, specifically focusing on Tversky Loss, Binary Cross-Entropy loss function Dice Loss, and Focal Loss. To determine the most effective model versions for all three loss functions, hyperparameter tuning was performed. The number of epochs and alpha values associated with the loss functions were optimized during this process. Following the comparison, the study further evaluates the effectiveness of two loss functions, Binary Cross-Entropy (BCE) and Focal loss, specifically in handling tumor regions within the dataset. Subsequently, the U-net convolutional neural network was implemented on the dataset using the two loss functions.
+---
 
-4. The two proposed loss functions were evaluated using 5-fold cross-validation, and the average precision, recall, and f1 were 76.16%, 71.9%, and 74.52 for BCE loss and 82.92%, 79.32%, and 81% for the Focal loss on the test data, respectively. Moreover, the accuracy for BCE loss was 99.03% and 99.44 % for the Focal loss.
-5. It is evident that precision, recall, accuracy, and dice coefficient (f1 score) obtained from the U-net model with Focal loss are significantly higher than the U-net model with BCE loss. Based on the results, training U-net on an enriched database containing more than three hundred brain MRI images with high resolution makes it possible to locate and diagnose the tumor in the brain and achieve high Precision in the brain tumor semantic segmentation task.
+### Overview
+Brain tumor segmentation from MRI scans is a critical task for early diagnosis, treatment planning, and outcome monitoring. This repository provides the code and workflows to reproduce our study comparing **Focal Loss** and **Binary Cross-Entropy (BCE) Loss** in training a U-Net model for automatic tumor segmentation.
 
-## Examples of predicted tumor segment by the current U-Net implementation.
-meningioma       	  | glioma		| 	pituitary tumor             
-:-------------------------:|:-------------------------:|:------------------------:
-![](samples/sample1.png)  |  ![](samples/sample2.png)		| ![](samples/sample3.png)
-![](samples/sample4.png)  |  ![](samples/sample5.png)		| ![](samples/sample6.png) 
-![](samples/sample7.png)  |  ![](samples/sample8.png)		| ![](samples/sample9.png) 
+Our experiments show that **Focal Loss outperforms BCE Loss** in terms of Dice coefficient, precision, recall, and overall segmentation robustness on imbalanced datasets.
 
-## Getting Started
-Here we will explain how to get the [data](https://drive.google.com/drive/folders/13Odglap6pPoqptcc-JkKrAXRTf1RPdxQ?usp=sharing) and convert it into the usable form. You can run the train and run model using [notebook](https://github.com/mahdishafiei/Brain-Tomur-Semantic-segmentation/blob/main/Unet_training_and_coefficients.ipynb).
-* it is better to use the notebook in the Colab environment however you can use it locally but you should make some changes to it about loading the dataset.
+---
+
+### Contributions
+- Built and trained **U-Net architecture** with 4 encoding and 4 decoding blocks (*see Figure 1, p.6*).  
+- Curated a **dataset of 314 high-resolution brain MRI scans** (sagittal, coronal, axial planes) from 108 patients.  
+- Implemented **skull stripping** preprocessing for noise reduction and improved localization (*see Figure 3, p.8*).  
+- Compared **loss functions** (BCE vs. Focal Loss) with extensive **hyperparameter tuning** via Ray Tune.  
+- Reported evaluation using **Dice (F1), Precision, Recall, Accuracy, and Hausdorff Distance**.  
+
+---
+
+### Results
+5-fold cross-validation summary (test data):
+
+| Loss Function | Accuracy | Dice (F1) | Precision | Recall |
+|---------------|----------|-----------|-----------|--------|
+| **Focal Loss** | 99.44%   | **81%**   | **82.92%** | **79.32%** |
+| BCE Loss      | 99.03%   | 74.52%    | 76.16%    | 71.9%  |
+
+- Focal Loss improved segmentation by **+6.4% Dice**, **+6.8% Precision**, **+7.4% Recall** compared to BCE.  
+- Hausdorff distance with Focal Loss: **95% CI = (43.22mm, 52.92mm)** (*Table 3, p.14*).  
+
+---
+
 ### Dataset
-you should donwload the provided dataset and put it in the appropriate directories base on what is in the [notebook](https://github.com/mahdishafiei/Brain-Tomur-Semantic-segmentation/blob/main/Unet_training_and_coefficients.ipynb).
-### Prerequisites
-You will need Python 3.X.X with some packages which you can install direclty using requirements.txt.
-> pip install -r requirements.txt
-## Model Architecture
+- **Source**: MRI scans collected at Bahar Medical Imaging Center (2021–2022).  
+- **Size**: 314 images (800×512 pixels) with expert-annotated masks (*examples in Figure 2, p.7*).  
+- **Preprocessing**: Skull stripping, Gaussian blurring, Otsu’s thresholding; multi-plane (sagittal, axial, coronal).  
+
+
+---
+
+### Model Architecture
 Here is the structure of model
 
 ![model](images/Model.png)
 
-## Author:
-* Mahdi Shafiei Neyestanak : [Linkedin](https://www.linkedin.com/in/mahdi-shafiei-bb4a531b7/)
-* Hamid Jahani: [Linkedin](https://www.linkedin.com/in/hamid-jahani/)
+---
+
+#### ⚙️ Implementation Details
+- **Frameworks**: Python 3.9, TensorFlow 2.8, Keras  
+- **Environment**: Google Colab TPU acceleration  
+- **IDE**: Spyder 5.0.1  
+- **Validation**: 5-fold cross-validation  
+
+---
+
+### 📥 Installation
+```bash
+git clone https://github.com/mahdishafiei/Brain-Tomur-Semantic-segmentation.git
+cd Brain-Tomur-Semantic-segmentation
+pip install -r requirements.txt
+
+
+### 📄 Citation
+
+If you use this code in your research, please cite our paper:
+
+```bibtex
+@article{neyestanak2025quantitative,
+  title={A quantitative comparison between focal loss and binary cross-entropy loss in brain tumor auto-segmentation using U-Net},
+  author={Neyestanak, Mahdi Shafiei and Jahani, Hamid and Khodarahmi, Mohsen and Zahiri, Javad and Hosseini, Mostafa and Fatoorchi, Amirali and Yekaninejad, Mir Saeed},
+  journal={Journal of Biostatistics and Epidemiology},
+  volume={11},
+  number={1},
+  pages={15--35},
+  year={2025}
+}
+```

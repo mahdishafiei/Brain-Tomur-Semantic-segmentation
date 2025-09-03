@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 import pandas as pd
+import cv2
 
 def calculate_tumor_brain_ratio(image_path):
     # Load the image

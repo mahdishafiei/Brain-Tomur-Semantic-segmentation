@@ -1,6 +1,26 @@
-sklearn
-numpy
-tensorflow
-keras
-matplotlib
-python-cv2
+# Core ML libraries
+tensorflow==2.8.0
+keras==2.8.0
+numpy==1.21.6
+scikit-learn==1.0.2
+
+# Image processing
+opencv-python==4.6.0.66
+scikit-image==0.19.3
+imageio==2.19.5
+Pillow==9.2.0
+
+# Visualization
+matplotlib==3.5.3
+seaborn==0.11.2
+
+# Progress bars and utilities
+tqdm==4.64.1
+pandas==1.4.4
+
+# Jupyter notebook support
+jupyter==1.0.0
+ipykernel==6.15.2
+
+# Optional: For advanced hyperparameter tuning
+ray[tune]==2.0.0
