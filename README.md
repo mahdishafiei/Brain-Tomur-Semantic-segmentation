@@ -67,13 +67,15 @@ git clone https://github.com/mahdishafiei/Brain-Tomur-Semantic-segmentation.git
 cd Brain-Tomur-Semantic-segmentation
 pip install -r requirements.txt
 ```
+
 ### citation
 
 If you use this code in your research, please cite our paper:
 
 ```bibtex
 @article{neyestanak2025quantitative,
-  title={A quantitative comparison between focal loss and binary cross-entropy loss in brain tumor auto-segmentation using U-Net},
+  title={A quantitative comparison between focal loss and binary cross-entropy loss in brain 
+  tumor auto-segmentation using U-Net},
   author={Neyestanak, Mahdi Shafiei and Jahani, Hamid and Khodarahmi, Mohsen and Zahiri, Javad and Hosseini, Mostafa and Fatoorchi, Amirali and Yekaninejad, Mir Saeed},
   journal={Journal of Biostatistics and Epidemiology},
   volume={11},
