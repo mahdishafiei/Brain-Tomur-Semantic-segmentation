@@ -9,14 +9,14 @@ Published in *Journal of Biostatistics and Epidemiology*, 2025 :contentReference
 
 ---
 
-## 📌 Overview
+### Overview
 Brain tumor segmentation from MRI scans is a critical task for early diagnosis, treatment planning, and outcome monitoring. This repository provides the code and workflows to reproduce our study comparing **Focal Loss** and **Binary Cross-Entropy (BCE) Loss** in training a U-Net model for automatic tumor segmentation.
 
 Our experiments show that **Focal Loss outperforms BCE Loss** in terms of Dice coefficient, precision, recall, and overall segmentation robustness on imbalanced datasets :contentReference[oaicite:1]{index=1}.  
 
 ---
 
-## 🚀 Key Contributions
+### Contributions
 - Built and trained **U-Net architecture** with 4 encoding and 4 decoding blocks (*see Figure 1, p.6*).  
 - Curated a **dataset of 314 high-resolution brain MRI scans** (sagittal, coronal, axial planes) from 108 patients.  
 - Implemented **skull stripping** preprocessing for noise reduction and improved localization (*see Figure 3, p.8*).  
@@ -25,7 +25,7 @@ Our experiments show that **Focal Loss outperforms BCE Loss** in terms of Dice c
 
 ---
 
-## 📊 Results
+### Results
 5-fold cross-validation summary (test data):
 
 | Loss Function | Accuracy | Dice (F1) | Precision | Recall |
@@ -38,20 +38,21 @@ Our experiments show that **Focal Loss outperforms BCE Loss** in terms of Dice c
 
 ---
 
-## 📂 Dataset
+### Dataset
 - **Source**: MRI scans collected at Bahar Medical Imaging Center (2021–2022).  
 - **Size**: 314 images (800×512 pixels) with expert-annotated masks (*examples in Figure 2, p.7*).  
 - **Preprocessing**: Skull stripping, Gaussian blurring, Otsu’s thresholding; multi-plane (sagittal, axial, coronal).  
 
+
 ---
 
-## Model Architecture
+### Model Architecture
 Here is the structure of model
 
 ![model](images/Model.png)
 ---
 
-## ⚙️ Implementation Details
+#### ⚙️ Implementation Details
 - **Frameworks**: Python 3.9, TensorFlow 2.8, Keras  
 - **Environment**: Google Colab TPU acceleration  
 - **IDE**: Spyder 5.0.1  
@@ -59,7 +60,7 @@ Here is the structure of model
 
 ---
 
-## 📥 Installation
+### 📥 Installation
 ```bash
 git clone https://github.com/mahdishafiei/BrainTomur-Semantic-segmentatio.git
 cd BrainTomur-Semantic-segmentatio
