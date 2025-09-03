@@ -61,14 +61,13 @@ Here is the structure of model
 
 ---
 
-### 📥 Installation
-```bash
+### Installation
+``` bash
 git clone https://github.com/mahdishafiei/Brain-Tomur-Semantic-segmentation.git
 cd Brain-Tomur-Semantic-segmentation
 pip install -r requirements.txt
-
-
-### 📄 Citation
+```
+### citation
 
 If you use this code in your research, please cite our paper:
 
