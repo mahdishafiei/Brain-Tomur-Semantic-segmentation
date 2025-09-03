@@ -5,14 +5,14 @@
 
 Official implementation of the paper:  
 **A Quantitative Comparison between Focal Loss and Binary Cross-Entropy Loss in Brain Tumor Auto-Segmentation Using U-Net**  
-Published in *Journal of Biostatistics and Epidemiology*, 2025 :contentReference[oaicite:0]{index=0}  
+Published in *Journal of Biostatistics and Epidemiology*, 2025 
 
 ---
 
 ### Overview
 Brain tumor segmentation from MRI scans is a critical task for early diagnosis, treatment planning, and outcome monitoring. This repository provides the code and workflows to reproduce our study comparing **Focal Loss** and **Binary Cross-Entropy (BCE) Loss** in training a U-Net model for automatic tumor segmentation.
 
-Our experiments show that **Focal Loss outperforms BCE Loss** in terms of Dice coefficient, precision, recall, and overall segmentation robustness on imbalanced datasets :contentReference[oaicite:1]{index=1}.  
+Our experiments show that **Focal Loss outperforms BCE Loss** in terms of Dice coefficient, precision, recall, and overall segmentation robustness on imbalanced datasets.
 
 ---
 
@@ -50,6 +50,7 @@ Our experiments show that **Focal Loss outperforms BCE Loss** in terms of Dice c
 Here is the structure of model
 
 ![model](images/Model.png)
+
 ---
 
 #### ⚙️ Implementation Details
@@ -62,6 +63,23 @@ Here is the structure of model
 
 ### 📥 Installation
 ```bash
-git clone https://github.com/mahdishafiei/BrainTomur-Semantic-segmentatio.git
-cd BrainTomur-Semantic-segmentatio
+git clone https://github.com/mahdishafiei/Brain-Tomur-Semantic-segmentation.git
+cd Brain-Tomur-Semantic-segmentation
 pip install -r requirements.txt
+
+
+### 📄 Citation
+
+If you use this code in your research, please cite our paper:
+
+```bibtex
+@article{neyestanak2025quantitative,
+  title={A quantitative comparison between focal loss and binary cross-entropy loss in brain tumor auto-segmentation using U-Net},
+  author={Neyestanak, Mahdi Shafiei and Jahani, Hamid and Khodarahmi, Mohsen and Zahiri, Javad and Hosseini, Mostafa and Fatoorchi, Amirali and Yekaninejad, Mir Saeed},
+  journal={Journal of Biostatistics and Epidemiology},
+  volume={11},
+  number={1},
+  pages={15--35},
+  year={2025}
+}
+```
